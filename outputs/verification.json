@@ -1,0 +1,33 @@
+{
+  "split_hash": "1599b04deccdc647c890ed30675159bed72fc30349c07a3c101ee32e2d9a05e1",
+  "models": {
+    "binary_bow": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    },
+    "word_frequency": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    },
+    "tfidf": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    },
+    "glove": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    },
+    "word2vec_ag": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    },
+    "word2vec_nyt": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    },
+    "bert": {
+      "passed": true,
+      "test_predictions_checked": 1153
+    }
+  }
+}

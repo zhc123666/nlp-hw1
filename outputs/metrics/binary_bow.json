@@ -1,0 +1,116 @@
+{
+  "method": "binary_bow",
+  "split_hash": "1599b04deccdc647c890ed30675159bed72fc30349c07a3c101ee32e2d9a05e1",
+  "data_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+  "seed": 42,
+  "validation": {
+    "accuracy": 0.9834926151172894,
+    "macro_f1": 0.9643656273702262
+  },
+  "test": {
+    "accuracy": 0.98959236773634,
+    "macro_f1": 0.9747875200021724
+  },
+  "config": {
+    "C": 1.0,
+    "C_candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "vocabulary_size": 64503,
+    "max_features": null,
+    "min_df": 1,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": null,
+    "tokenizer": "[a-z]+(?:'[a-z]+)?"
+  },
+  "elapsed_seconds": 7.859999999869615,
+  "classification_report": {
+    "business": {
+      "precision": 0.9770992366412213,
+      "recall": 0.9343065693430657,
+      "f1-score": 0.9552238805970149,
+      "support": 137.0
+    },
+    "politics": {
+      "precision": 0.9554140127388535,
+      "recall": 0.9868421052631579,
+      "f1-score": 0.970873786407767,
+      "support": 152.0
+    },
+    "sports": {
+      "precision": 0.9976878612716763,
+      "recall": 0.9988425925925926,
+      "f1-score": 0.9982648930017352,
+      "support": 864.0
+    },
+    "accuracy": 0.98959236773634,
+    "macro avg": {
+      "precision": 0.9767337035505838,
+      "recall": 0.9733304223996053,
+      "f1-score": 0.9747875200021724,
+      "support": 1153.0
+    },
+    "weighted avg": {
+      "precision": 0.989668549431814,
+      "recall": 0.98959236773634,
+      "f1-score": 0.9895397699299833,
+      "support": 1153.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      128,
+      7,
+      2
+    ],
+    [
+      2,
+      150,
+      0
+    ],
+    [
+      1,
+      0,
+      863
+    ]
+  ],
+  "classes": [
+    "business",
+    "politics",
+    "sports"
+  ],
+  "environment": {
+    "python": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.1",
+      "gensim": "4.3.3",
+      "torch": "2.5.1+cu124",
+      "transformers": "4.46.3",
+      "reportlab": "not installed"
+    }
+  },
+  "validation_trials": [
+    {
+      "C": 0.1,
+      "accuracy": 0.9834926151172894,
+      "macro_f1": 0.9643322238326572
+    },
+    {
+      "C": 1.0,
+      "accuracy": 0.9834926151172894,
+      "macro_f1": 0.9643656273702262
+    },
+    {
+      "C": 10.0,
+      "accuracy": 0.9800173761946134,
+      "macro_f1": 0.9579561872503181
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "method": "glove",
+  "split_hash": "1599b04deccdc647c890ed30675159bed72fc30349c07a3c101ee32e2d9a05e1",
+  "data_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+  "seed": 42,
+  "validation": {
+    "accuracy": 0.9808861859252823,
+    "macro_f1": 0.9594000161310245
+  },
+  "test": {
+    "accuracy": 0.986990459670425,
+    "macro_f1": 0.9691231428691413
+  },
+  "config": {
+    "dimension": 100,
+    "embedding": "glove.6B.100d",
+    "source_sha256": "95dde4dfd627ab26608d33e76d1195ec059734bd29089ea52cadb08d07c64544",
+    "pooling": "mean of in-vocabulary token occurrences",
+    "C": 0.1,
+    "C_candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "standard_scaler": "fit on NYT train only",
+    "solver": "lbfgs",
+    "max_iter": 2000
+  },
+  "elapsed_seconds": 41.48400000017136,
+  "classification_report": {
+    "business": {
+      "precision": 0.9626865671641791,
+      "recall": 0.9416058394160584,
+      "f1-score": 0.9520295202952029,
+      "support": 137.0
+    },
+    "politics": {
+      "precision": 0.9483870967741935,
+      "recall": 0.9671052631578947,
+      "f1-score": 0.9576547231270358,
+      "support": 152.0
+    },
+    "sports": {
+      "precision": 0.9976851851851852,
+      "recall": 0.9976851851851852,
+      "f1-score": 0.9976851851851852,
+      "support": 864.0
+    },
+    "accuracy": 0.986990459670425,
+    "macro avg": {
+      "precision": 0.969586283041186,
+      "recall": 0.9687987625863794,
+      "f1-score": 0.9691231428691413,
+      "support": 1153.0
+    },
+    "weighted avg": {
+      "precision": 0.987027665577771,
+      "recall": 0.986990459670425,
+      "f1-score": 0.9869831415401148,
+      "support": 1153.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      129,
+      7,
+      1
+    ],
+    [
+      4,
+      147,
+      1
+    ],
+    [
+      1,
+      1,
+      862
+    ]
+  ],
+  "classes": [
+    "business",
+    "politics",
+    "sports"
+  ],
+  "environment": {
+    "python": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.1",
+      "gensim": "4.3.3",
+      "torch": "2.5.1+cu124",
+      "transformers": "4.46.3",
+      "reportlab": "not installed"
+    }
+  },
+  "coverage": {
+    "train": {
+      "token_coverage": 0.981205882547404,
+      "valid_tokens": 5787742,
+      "total_tokens": 5898601,
+      "zero_vector_documents": 0
+    },
+    "validation": {
+      "token_coverage": 0.9816207378138093,
+      "valid_tokens": 720436,
+      "total_tokens": 733925,
+      "zero_vector_documents": 0
+    },
+    "test": {
+      "token_coverage": 0.9813273937512601,
+      "valid_tokens": 725198,
+      "total_tokens": 738997,
+      "zero_vector_documents": 0
+    }
+  },
+  "validation_trials": [
+    {
+      "C": 0.1,
+      "accuracy": 0.9808861859252823,
+      "macro_f1": 0.9594000161310245
+    },
+    {
+      "C": 1.0,
+      "accuracy": 0.9791485664639444,
+      "macro_f1": 0.9570339633269241
+    },
+    {
+      "C": 10.0,
+      "accuracy": 0.9774109470026064,
+      "macro_f1": 0.9545308978161898
+    }
+  ],
+  "embedding_vocabulary_size": 57674
+}

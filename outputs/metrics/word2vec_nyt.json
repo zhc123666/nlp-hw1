@@ -1,0 +1,144 @@
+{
+  "method": "word2vec_nyt",
+  "split_hash": "1599b04deccdc647c890ed30675159bed72fc30349c07a3c101ee32e2d9a05e1",
+  "data_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+  "seed": 42,
+  "validation": {
+    "accuracy": 0.9808861859252823,
+    "macro_f1": 0.9611390840849149
+  },
+  "test": {
+    "accuracy": 0.9887250650477016,
+    "macro_f1": 0.9698672216808427
+  },
+  "config": {
+    "dimension": 100,
+    "window": 5,
+    "min_count": 2,
+    "sg": 1,
+    "negative": 5,
+    "epochs": 10,
+    "workers": 1,
+    "seed": 42,
+    "training_corpus": "NYT training split only",
+    "corpus_documents": 9215,
+    "pooling": "mean of in-vocabulary token occurrences",
+    "C": 0.1,
+    "C_candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "standard_scaler": "fit on NYT train only",
+    "solver": "lbfgs",
+    "max_iter": 2000
+  },
+  "elapsed_seconds": 250.71899999980815,
+  "classification_report": {
+    "business": {
+      "precision": 0.9696969696969697,
+      "recall": 0.9343065693430657,
+      "f1-score": 0.9516728624535316,
+      "support": 137.0
+    },
+    "politics": {
+      "precision": 0.9426751592356688,
+      "recall": 0.9736842105263158,
+      "f1-score": 0.9579288025889967,
+      "support": 152.0
+    },
+    "sports": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 864.0
+    },
+    "accuracy": 0.9887250650477016,
+    "macro avg": {
+      "precision": 0.9707907096442128,
+      "recall": 0.9693302599564605,
+      "f1-score": 0.9698672216808427,
+      "support": 1153.0
+    },
+    "weighted avg": {
+      "precision": 0.9888422454920264,
+      "recall": 0.9887250650477016,
+      "f1-score": 0.988711500563453,
+      "support": 1153.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      128,
+      9,
+      0
+    ],
+    [
+      4,
+      148,
+      0
+    ],
+    [
+      0,
+      0,
+      864
+    ]
+  ],
+  "classes": [
+    "business",
+    "politics",
+    "sports"
+  ],
+  "environment": {
+    "python": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.1",
+      "gensim": "4.3.3",
+      "torch": "2.5.1+cu124",
+      "transformers": "4.46.3",
+      "reportlab": "not installed"
+    }
+  },
+  "coverage": {
+    "train": {
+      "token_coverage": 0.9967139665829237,
+      "valid_tokens": 5879218,
+      "total_tokens": 5898601,
+      "zero_vector_documents": 0
+    },
+    "validation": {
+      "token_coverage": 0.9921054603672037,
+      "valid_tokens": 728131,
+      "total_tokens": 733925,
+      "zero_vector_documents": 0
+    },
+    "test": {
+      "token_coverage": 0.9918186406710717,
+      "valid_tokens": 732951,
+      "total_tokens": 738997,
+      "zero_vector_documents": 0
+    }
+  },
+  "validation_trials": [
+    {
+      "C": 0.1,
+      "accuracy": 0.9808861859252823,
+      "macro_f1": 0.9611390840849149
+    },
+    {
+      "C": 1.0,
+      "accuracy": 0.9800173761946134,
+      "macro_f1": 0.9590941685705943
+    },
+    {
+      "C": 10.0,
+      "accuracy": 0.9817549956559514,
+      "macro_f1": 0.9604911349791522
+    }
+  ],
+  "embedding_vocabulary_size": 45120
+}

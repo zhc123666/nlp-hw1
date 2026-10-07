@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+HW-1/
+data/
+models/
+outputs/models/
+outputs/features/
+tmp/
+*.zip
+*.wxdownload
+tmp_*.log
+validation.log
+validation.json

@@ -1,0 +1,139 @@
+{
+  "method": "bert",
+  "split_hash": "1599b04deccdc647c890ed30675159bed72fc30349c07a3c101ee32e2d9a05e1",
+  "data_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+  "seed": 42,
+  "validation": {
+    "accuracy": 0.9730668983492615,
+    "macro_f1": 0.9488497066599256
+  },
+  "test": {
+    "accuracy": 0.981786643538595,
+    "macro_f1": 0.9607201705344194
+  },
+  "config": {
+    "model": "google-bert/bert-base-uncased",
+    "local_or_hub_path": "C:\\Users\\13535\\OneDrive\\Desktop\\自然语言处理\\作业一\\models\\bert-base-uncased",
+    "max_length": 64,
+    "epochs": 3,
+    "selected_epoch": 2,
+    "batch_size": 16,
+    "gradient_accumulation": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "device": "cuda",
+    "fp16": true,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "seed": 42,
+    "checkpoint_selection": "validation Macro-F1 then Accuracy",
+    "pretrained_source": {
+      "model": "google-bert/bert-base-uncased",
+      "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"
+    }
+  },
+  "elapsed_seconds": 159.60999999986961,
+  "classification_report": {
+    "business": {
+      "precision": 0.9420289855072463,
+      "recall": 0.948905109489051,
+      "f1-score": 0.9454545454545454,
+      "support": 137.0
+    },
+    "politics": {
+      "precision": 0.9240506329113924,
+      "recall": 0.9605263157894737,
+      "f1-score": 0.9419354838709677,
+      "support": 152.0
+    },
+    "sports": {
+      "precision": 0.9988331388564761,
+      "recall": 0.9907407407407407,
+      "f1-score": 0.9947704822777454,
+      "support": 864.0
+    },
+    "accuracy": 0.981786643538595,
+    "macro avg": {
+      "precision": 0.954970919091705,
+      "recall": 0.9667240553397551,
+      "f1-score": 0.9607201705344194,
+      "support": 1153.0
+    },
+    "weighted avg": {
+      "precision": 0.9822250643443362,
+      "recall": 0.981786643538595,
+      "f1-score": 0.9819455012694119,
+      "support": 1153.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      130,
+      6,
+      1
+    ],
+    [
+      6,
+      146,
+      0
+    ],
+    [
+      2,
+      6,
+      856
+    ]
+  ],
+  "classes": [
+    "business",
+    "politics",
+    "sports"
+  ],
+  "environment": {
+    "python": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.1",
+      "gensim": "4.3.3",
+      "torch": "2.5.1+cu124",
+      "transformers": "4.46.3",
+      "reportlab": "not installed"
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.2850312353652001,
+      "accuracy": 0.9687228496959166,
+      "macro_f1": 0.9413502652466961
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.04991946255488041,
+      "accuracy": 0.9730668983492615,
+      "macro_f1": 0.9488497066599256
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.01886398664842917,
+      "accuracy": 0.9721980886185926,
+      "macro_f1": 0.9476254799350029
+    }
+  ],
+  "truncation": {
+    "train": {
+      "fraction_over_64": 0.9996744438415627,
+      "mean_original_wordpieces": 835.6376559956592
+    },
+    "validation": {
+      "fraction_over_64": 0.9991311902693311,
+      "mean_original_wordpieces": 830.0199826238054
+    },
+    "test": {
+      "fraction_over_64": 0.9991326973113617,
+      "mean_original_wordpieces": 835.0511708586297
+    }
+  }
+}
